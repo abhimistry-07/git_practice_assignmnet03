@@ -1,12 +1,18 @@
-function check_prime(){
+function check_prime(num){
 	
-	for(let i=0 ; i<=num ; i++){
-		if(num%i){
-			return true;
+	let factor=0;
+	for(let i=1 ; i<=num ; i++){
+		if(num%i==0){
+		factor++;
 		}
+		}
+		if(factor==2){
+			return true;
+		}else{
 		return false;	
 	}
 }
 
-check_prime(13)
+let answer=check_prime(13);
+console.log(answer);
 	
